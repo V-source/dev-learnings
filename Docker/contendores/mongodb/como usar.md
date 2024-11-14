@@ -35,7 +35,11 @@ Si deseas **persistir** los datos en tu máquina local, puedes montar un volumen
 
 ```bash
 docker run --name mongodb -d -p 27017:27017 -v $(pwd)/data:/data/db mongodb/mongodb-community-server:$MONGODB_VERSION
+
 ```
+> [!NOTE]
+> sustituye `$(pwd)` por la ruta donde se encuentra la carpeta `data` en tu sistema
+> ejemplo: `~/data`
 
 Si detienes y vuelves a iniciar el contenedor, todos los datos que ingresaste previamente seguirán estando allí.
 
