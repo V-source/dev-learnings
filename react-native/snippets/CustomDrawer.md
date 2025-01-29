@@ -28,6 +28,7 @@ export default function CustomDrawer() {
     <Drawer
       drawerContent={(props: DrawerContentComponentProps) => <CustomDrawerContent {...props} />}
       screenOptions={{
+        swipeEdgeWidth:150,
         drawerStyle: {
           backgroundColor: '#ffffff50',
           width: 250,
