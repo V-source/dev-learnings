@@ -86,40 +86,8 @@ export default function News() {
   return (
     <RadialGradientBackground>
       <View style={[{ borderWidth: 0, alignItems: "center" }]}>
-        <Text style={[gradientStyles.title]}>Noticias y Novedades</Text>
+        <Text style={[gradientStyles.title]}>Gradiente con burbujas</Text>
       </View>
-      <NewsCard title="Nuestros Planes" image="https://sucrenet.com.ve/img/residencial.webp" />
-      <NewsCard title="Refiere y Gana" image="https://images.pexels.com/photos/30479199/pexels-photo-30479199/free-photo-of-elegant-woman-in-sunlit-traditional-setting.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-      <NewsCard title="Monedero" image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQD2l6ERYwwHLz-K455GE1bEmgNT5LvfE6vw&s"/>
-
-      <Button
-        styles={{
-          buttonBox: {
-            borderWidth: 3,
-            borderColor: '#ffffff30',
-            backgroundColor: '#0047ff99',
-            // alignSelf: 'center',
-            elevation: 4,
-            paddingVertical: 8,
-            paddingHorizontal: 24,
-            marginTop: 'auto',
-            borderRadius: 100,
-
-          },
-
-          button: {
-            borderWidth: 0,
-          },
-          textBelow: {},
-        }}
-        child={() => {
-          return <Text style={{ alignSelf: 'center', color: '#fff', fontSize: 12, fontWeight: 600}}> Ir a Inicio </Text>
-        }}
-        onPress={() => {
-          router.navigate('/(tabs)')
-        }}
-
-      />
     </RadialGradientBackground>
   );
 }
