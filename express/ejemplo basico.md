@@ -1,4 +1,4 @@
-Aquí tienes un script completo para un servidor en **Express** con **TypeScript** que incluye todas las funcionalidades solicitadas. Este servidor maneja errores, se conecta a **MongoDB** y **SQL** (usando **MySQL** como ejemplo), implementa autenticación con **JSON Web Tokens (JWT)**, incluye un logger para el servidor y la base de datos, limita las peticiones, maneja sesiones y tokens de sesión, y define middlewares para las rutas de **login**, **dashboard** y **logout**.
+Un script completo para un servidor en **Express** con **TypeScript** que incluye todas las funcionalidades solicitadas. Este servidor maneja errores, se conecta a **MongoDB** y **SQL** (usando **MySQL** como ejemplo), implementa autenticación con **JSON Web Tokens (JWT)**, incluye un logger para el servidor y la base de datos, limita las peticiones, maneja sesiones y tokens de sesión, y define middlewares para las rutas de **login**, **dashboard** y **logout**.
 
 ---
 
@@ -256,4 +256,3 @@ SESSION_SECRET=mysessionsecret
 
 ---
 
-Este script proporciona una base sólida para un servidor con las funcionalidades solicitadas. Puedes expandirlo según tus necesidades. ¡Espero que te sea útil! 😊
