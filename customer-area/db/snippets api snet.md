@@ -44,3 +44,13 @@ App\Models\Cliente::find(10)->servicios->each(fn ($s)=>$s->facturas->each->delet
 ```php
 App\Models\Cliente::find(10)->servicios->each(fn ($s) => App\Models\Factura::factory(30)->for($s)->state(["estado"=>"Pagado"])->create())
 ```
+
+#### CREAR REFERIDOS
+```php
+use App\Enums\ReferidoStatus;
+use App\Models\{Cliente, Referido};
+use Illuminate\Database\Eloquent\Factories\Sequence;
+
+$sequence = new Sequence(ReferidoStatus::ELIMINADO, ReferidoStatus::VENCIDO, ReferidoStatus::CONFIRMADO);
+Referido::factory(30)->hasAttached(Cliente::find(26), fn () => ['status' => $sequence()])->create();
+```
