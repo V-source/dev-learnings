@@ -1,20 +1,19 @@
 Para montar carpetas de Windows en tu máquina Arch Linux y poder programar el servidor desde ella, necesitarás configurar SSHFS con algunas consideraciones especiales para el entorno Windows. Te guiaré a través del proceso completo.
 
-###  Requisitos Previos
+### Requisitos Previos
 
 1. En el servidor Windows:
-  - Windows 10/11 con OpenSSH instalado (viene preinstalado)
-  - Servicio SSH activado y ejecutándose
-  - Puerto SSH configurado (por defecto es 22)
 
+- Windows 10/11 con OpenSSH instalado (viene preinstalado)
+- Servicio SSH activado y ejecutándose
+- Puerto SSH configurado (por defecto es 22)
 
 2. En tu máquina Arch Linux:
-  - Paquete `sshfs` instalado
-  - Sistema FUSE configurado
 
+- Paquete `sshfs` instalado
+- Sistema FUSE configurado
 
-
-###  Instalación y Configuración Básica
+### Instalación y Configuración Básica
 
 ```bash
 # Instalar sshfs
@@ -27,7 +26,7 @@ mkdir ~/win-dev
 sshfs usuario@ip-servidor:/ruta/compartida ~/win-dev -o allow_other,uid=1000,gid=1000,dir_cache=no
 ```
 
-###  Configuración Avanzada para Desarrollo
+### Configuración Avanzada para Desarrollo
 
 Para un entorno de desarrollo eficiente, crea un archivo de configuración en `/etc/fstab`:
 
@@ -38,7 +37,7 @@ usuario@ip-servidor:/ruta/compartida /home/tu_usuario/win-dev fuse.sshfs \
     0 0
 ```
 
-###  Integración con NeoVim
+### Integración con NeoVim
 
 Para aprovechar tu configuración NeoVim, agrega estas líneas a tu `init.vim`:
 
@@ -49,9 +48,10 @@ set autoread        " Recarga automáticamente archivos modificados
 set autowrite       " Escribe cambios automáticamente
 ```
 
-###  Consideraciones de Seguridad
+### Consideraciones de Seguridad
 
 1. Autenticación segura:
+
 ```bash
 # Generar clave SSH
 ssh-keygen -t ed25519
@@ -60,33 +60,30 @@ ssh-keygen -t ed25519
 cat ~/.ssh/id_ed25519.pub | ssh usuario@ip-servidor "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 ```
 
-
 2. Permisos:
-  - Asegúrate de tener permisos de lectura/escritura en la carpeta compartida
-  - Configura correctamente los UID/GID en el montaje
-  - Usa `allow_other` solo si es necesario 5:9
 
+- Asegúrate de tener permisos de lectura/escritura en la carpeta compartida
+- Configura correctamente los UID/GID en el montaje
+- Usa `allow_other` solo si es necesario 5:9
 
-
-###  Solución de Problemas Comunes
+### Solución de Problemas Comunes
 
 1. Si los archivos no se actualizan:
+
 ```bash
 # Desmontar y volver a montar
 fusermount3 -u ~/win-dev
 sshfs usuario@ip-servidor:/ruta/compartida ~/win-dev -o allow_other,dir_cache=no
 ```
 
-
 2. Para depuración:
+
 ```bash
 # Montaje con modo debug
 sshfs usuario@ip-servidor:/ruta/compartida ~/win-dev -o ssh_command='ssh -vv',sshfs_debug,debug
 ```
 
-
-
-###  Comandos Útiles
+### Comandos Útiles
 
 ```bash
 # Verificar montaje
