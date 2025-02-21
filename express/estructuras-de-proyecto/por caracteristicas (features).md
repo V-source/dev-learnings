@@ -164,3 +164,4 @@ connectDB().then(() => {
 ### Conclusión
 
 La estructura de carpetas por características es una excelente opción para proyectos de ExpressJS que buscan escalar y mantenerse organizados. Al agrupar el código por funcionalidad, se mejora la legibilidad, mantenibilidad y desacoplamiento del proyecto. Esta estructura es especialmente útil en aplicaciones grandes con múltiples características y equipos de desarrollo.
+
