@@ -1,11 +1,17 @@
 # `useLocalSearchParams()`
 
+Su función es simplemente recuperar los parámetros de búsqueda de la URL actual y devolverlos como un objeto.
+
 > [!NOTE]
 > no recibe parametros.
 
-Su función es simplemente recuperar los parámetros de búsqueda de la URL actual y devolverlos como un objeto.
+> [!NOTE]Consideraciones:
+> - useLocalSearchParams() devuelve un objeto que puede estar vacío si no hay parámetros de búsqueda en la URL.
+> - Los valores de los parámetros de búsqueda se devuelven como cadenas de texto.
+> - Si necesitas convertir los valores a otros tipos (por ejemplo, números), debes hacerlo manualmente.
 
-**Ejemplo**:
+
+**Ejemplo de uso**:
 
 ```tsx
 
@@ -21,3 +27,4 @@ function MiComponente() {
   // ...
 }
 ```
+
