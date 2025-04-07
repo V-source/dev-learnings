@@ -39,6 +39,7 @@ const EjemploAnimatedComponent = () => {
     ).start();
   }, [colorAnim]);
 
+
   // 5. Interpolamos el valor animado a un rango de colores
   const backgroundColor = colorAnim.interpolate({
     inputRange: [0, 0.33, 0.66, 1],
