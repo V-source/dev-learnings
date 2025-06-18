@@ -117,7 +117,7 @@ Código corregido:
 
 ---
 
-### 🔍 **¿Qué cambiaste y por qué?**
+### 🔍 **¿Qué cambié y por qué?**
 
 * `"types": [...]`: agregaste `@tailwindcss/vite` para que TypeScript sepa buscar sus tipos.
 * `"moduleResolution": "bundler"`: esto permite resolver módulos `.mts`, `.cts`, etc., usados por Vite y Tailwind.
