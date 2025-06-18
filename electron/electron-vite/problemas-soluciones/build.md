@@ -78,13 +78,7 @@ El problema se debe a la **configuración del `tsconfig`**:
 
 ### ✅ **Solución implementada**
 
-#### Paso 1: Instalar los tipos (aunque opcional en este caso, ayuda al autocompletado)
-
-```bash
-npm install --save-dev @types/tailwindcss
-```
-
-#### Paso 2: Modificar el archivo `tsconfig.node.json` (o el usado en el build)
+#### Paso 1: Modificar el archivo `tsconfig.node.json` (o el usado en el build)
 
 Código original:
 
