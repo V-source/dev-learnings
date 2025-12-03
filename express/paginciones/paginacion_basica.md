@@ -97,3 +97,7 @@ La respuesta JSON enviada por Express no solo debe contener los datos, sino tamb
 ```
 
 Esta lógica es la columna vertebral de cualquier paginación basada en la técnica **Offset** (saltar y limitar), la cual es estándar para las APIs REST en Node.js y Express.js.
+
+
+
+
