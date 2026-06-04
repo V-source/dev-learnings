@@ -1,3 +1,4 @@
+
 El manejo de los **UUIDs (o IDs auto-generados)** en Clean Architecture desata debates intensos entre arquitectos. Sin embargo, si nos apegamos al **desacoplamiento radical** y a la **testabilidad**, la respuesta de élite es:
 
 **El UUID se genera en la capa de Aplicación (Caso de Uso) o en el Dominio (Entidad), pero la herramienta técnica para generarlo se inyecta.**
